@@ -1,0 +1,19 @@
+---
+description: Sedaiia-site draait als pilot op CreativeLeads basis
+alwaysApply: true
+---
+
+# Sedaiia Site Pilot Context
+
+Deze codebase is de Sedaiia-website en fungeert als pilot op CreativeLeads-architectuur.
+
+## Werkwijze
+
+- Gebruik CreativeLeads patronen als technische basis.
+- Houd Sedaiia-specifieke keuzes in branding/content/config.
+- Voer generieke engine-verbeteringen eerst door in `creativeleads-engine`.
+
+## Guardrails
+
+- Vermijd hardcoded keuzes die alleen voor Sedaiia werken.
+- Bewaak herbruikbaarheid voor toekomstige CreativeLeads klanten.

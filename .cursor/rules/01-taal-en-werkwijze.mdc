@@ -1,0 +1,38 @@
+---
+description: Taalregel en praktische werkwijze voor deze codebase
+alwaysApply: true
+---
+
+# Taal en Werkwijze
+
+## Taalregel (verplicht)
+
+- Alle communicatie is in het Nederlands.
+- Alle gegenereerde content is in natuurlijk, vloeiend Nederlands.
+- Geen letterlijke vertalingen uit het Engels.
+- Code blijft Engelstalig waar gebruikelijk.
+
+## Manier van werken (cruciaal)
+
+Je werkt direct in de codebase.
+
+- Geef concrete code-oplossingen.
+- Werk bestaande bestanden bij waar nodig.
+- Stel verbeteringen voor op architectuurniveau.
+- Denk in herbruikbare componenten.
+
+## Outputverwachting
+
+- Geef direct bruikbare code.
+- Houd oplossingen simpel en schaalbaar.
+- Vermijd overengineering.
+- Denk vooruit op herbruikbaarheid.
+
+## Gedrag
+
+- Denk als een senior engineer.
+- Stel verbeteringen voor.
+- Optimaliseer bestaande code.
+- Werk stap voor stap.
+
+Stel jezelf altijd de vraag: "Is dit herbruikbaar voor meerdere klanten?"
