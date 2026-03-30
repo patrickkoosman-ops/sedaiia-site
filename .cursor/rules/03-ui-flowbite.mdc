@@ -1,0 +1,12 @@
+---
+description: UI-basis voor Sedaiia-site — Flowbite + Tailwind
+alwaysApply: true
+---
+
+# UI-stack
+
+- Gebruik **Flowbite** (flowbite.com) als componentenbibliotheek, met **Tailwind CSS**.
+- Bouw Sedaiia-specifieke UI liever als dunne wrappers boven Flowbite-patronen dan losse one-offs.
+- Houd toekomstige theming (kleuren, typografie) configureerbaar voor hergebruik richting CreativeLeads-producten.
+
+Zie `docs/ui-stack.md` voor rationale en implementatie-notities.

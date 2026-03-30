@@ -10,4 +10,4 @@ Zie [DEPLOYMENT.md](./DEPLOYMENT.md) voor Vercel-root (`apps/web`), env-vars en 
 
 - `apps/web` — Next.js (App Router), productie-app voor Vercel
 - `packages/` — herbruikbare modules (ui, core, config)
-- `docs/` — scope en beslissingen
+- `docs/` — scope en beslissingen (o.a. [UI-stack](./docs/ui-stack.md): Flowbite + Tailwind)
