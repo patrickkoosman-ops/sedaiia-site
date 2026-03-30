@@ -2,6 +2,12 @@
 
 We gebruiken **Supabase PostgreSQL** als bron voor bewerkbare content, **zonder** extra CMS-abonnement. De site leest met de **anon key** (publiek lezen via RLS).
 
+## Payload CMS — planning is niet verloren gegaan
+
+In de **Sedaiia-/AestheticLeads-planning** blijft **Payload CMS** de voorziene oplossing voor de **multi-tenant kliniek-engine** (collecties, tenants, blokken). Dat staat in **`sedaiia-hq/architecture.md`** en in de Cursor-regels van **`aestheticleads-engine`**.
+
+**Deze repo (`sedaiia-site`)** gebruikt **bewust** geen Payload voor de marketing-pilot: minder overhead, de Supabase die je al hebt, snelle iteratie. Dat is **geen** vervanging van Payload voor het product; zie ook **`sedaiia-hq/docs/cms-en-repositories.md`**.
+
 ## Aanpak
 
 1. Tabellen in Supabase houden marketingteksten en later uitbreidbare blokken.
@@ -32,4 +38,4 @@ Geen `SERVICE_ROLE` nodig voor alleen-lezen homepage.
 ## Volgende uitbreidingen (wanneer nodig)
 
 - Extra tabellen: `site_pages`, `navigation_items`, `blog_posts`.
-- [Payload CMS](https://payloadcms.com/) overwegen voor AestheticLeads multi-tenant; sedaiia-site kan bewust op Supabase-tables blijven voor eenvoud en kosten.
+- Meer gestructureerde multi-tenant content hoort bij **Payload** in **aestheticleads-engine** (zie planning); sedaiia-site kan op Supabase-tables blijven of later een subset synchroniseren — beslissing volgt bij integratie.

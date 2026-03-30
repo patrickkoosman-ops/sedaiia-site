@@ -10,6 +10,8 @@ Zie [DEPLOYMENT.md](./DEPLOYMENT.md) voor Vercel-root (`apps/web`), env-vars en 
 
 Zie [docs/cms-supabase.md](./docs/cms-supabase.md) — eerste stap: SQL-migratie `supabase/migrations/00001_site_homepage.sql` in je Supabase-project draaien.
 
+**Payload CMS** (planning voor de AestheticLeads-engine) staat vast in `sedaiia-hq`, niet in deze repo; zie korte uitleg in `docs/cms-supabase.md`.
+
 ## Structuur
 
 - `apps/web` — Next.js (App Router), productie-app voor Vercel

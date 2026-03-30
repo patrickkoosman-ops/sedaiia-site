@@ -3,11 +3,11 @@ description: CMS-light voor sedaiia-site via Supabase-tabellen
 alwaysApply: true
 ---
 
-# CMS (Supabase)
+# CMS (Supabase) — sedaiia-site
 
-- Marketing content komt uit **Supabase PostgreSQL** (geen apart CMS-product verplicht).
+- Marketing content komt uit **Supabase PostgreSQL** (CMS-light in deze repo).
 - Publieke pagina's lezen met **anon key** + RLS `select` policies.
 - `SERVICE_ROLE` alleen voor server-side writes of admin; niet in client bundles.
 - Nieuwe contentvelden: liever migration SQL in `supabase/migrations/` + types in `apps/web` bijwerken.
 
-Zie `docs/cms-supabase.md`.
+**Payload CMS** hoort bij de **AestheticLeads product-engine** (multi-tenant), niet als default in deze pilot-repo. Zie `docs/cms-supabase.md` en `sedaiia-hq/docs/cms-en-repositories.md`.
