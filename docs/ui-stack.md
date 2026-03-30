@@ -12,9 +12,10 @@
 
 ## Implementatie-notities (Next.js)
 
-- Gebruik de officiële Flowbite-setup voor Tailwind v4 of v3 volgens hun docs (versie synchroon houden met Next).
-- Optioneel: `flowbite-react` voor React-componenten — check compatibiliteit met de huidige React/Next-versie voordat je vastlegt.
-- Houd merk-specifieke aanpassingen in een dunne laag (eigen wrapper-componenten of CSS-variabelen), niet overal losse Flowbite-classes copy-pasten.
+**Status:** geïmplementeerd in `apps/web` — Tailwind CSS v4 (`@tailwindcss/postcss`), `flowbite-react` met officiële Next-plugin (`withFlowbiteReact`), `postcss.config.mjs`, `globals.css` met `@plugin "flowbite-react/plugin/tailwindcss"` en `@source` naar `.flowbite-react/class-list.json`. Root layout gebruikt `ThemeModeScript` (default light) en `ThemeInit` uit `.flowbite-react/init`.
+
+- Houd merk-specifieke aanpassingen in een dunne laag (eigen wrappers of thema via `createTheme` / `ThemeProvider`).
+- Externe links met `Button`: gebruik `as="a"` zodat `target` en `rel` type-safe blijven.
 
 ## Review-moment
 
