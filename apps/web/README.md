@@ -1,18 +1,16 @@
-# CreativeLeads Web App (Skeleton)
+# Sedaiia Web App
 
-Dit is een minimale, voorspelbare startstructuur voor de Next.js webapp.
+Next.js-app voor sedaiia.com (pilot). Zelfde patronen als CreativeLeads-producten, maar deze repo is alleen de Sedaiia-site.
 
 ## Structuur
 
-- `src/app/` App Router entrypoints
-- `src/components/` app-specifieke componenten
+- `src/app/` App Router
+- `src/components/` site-specifieke componenten
 - `public/` statische assets
 
-## Scope-notitie (bevestigd)
+## Bevestigde bouwstenen (roadmap)
 
-CreativeLeads richt zich in elk geval op:
-
-- portfolio-gedreven websites
-- boeking-engine integratie
-- Stripe integratie
-- lightweight blog systeem
+- Portfolio-gedreven opzet
+- Boeking-engine
+- Stripe
+- Lightweight blog

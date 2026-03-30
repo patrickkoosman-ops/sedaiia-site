@@ -1,13 +1,13 @@
-# CreativeLeads
+# Sedaiia Site
 
-Niche-engine voor creative studios onder Sedaiia.
+Officiële Sedaiia-website (pilot), technisch opgebouwd als CreativeLeads-achtige stack: Next.js in `apps/web`, gedeelde modules onder `packages/`, documentatie onder `docs/`.
 
-## Doel
+## Deploy
 
-Schaalbare websites met een eigen creatieve aanpak, terwijl de technische basis voorspelbaar blijft.
+Zie [DEPLOYMENT.md](./DEPLOYMENT.md) voor Vercel-root (`apps/web`), env-vars en domein.
 
 ## Structuur
 
-- `apps/` deploybare apps (bijv. Next.js frontend)
-- `packages/` gedeelde domeinlogica, UI en configuratie
-- `docs/` architectuur, workflows en beslissingen
+- `apps/web` — Next.js (App Router), productie-app voor Vercel
+- `packages/` — herbruikbare modules (ui, core, config)
+- `docs/` — scope en beslissingen
