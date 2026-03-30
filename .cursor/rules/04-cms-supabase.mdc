@@ -1,0 +1,13 @@
+---
+description: CMS-light voor sedaiia-site via Supabase-tabellen
+alwaysApply: true
+---
+
+# CMS (Supabase)
+
+- Marketing content komt uit **Supabase PostgreSQL** (geen apart CMS-product verplicht).
+- Publieke pagina's lezen met **anon key** + RLS `select` policies.
+- `SERVICE_ROLE` alleen voor server-side writes of admin; niet in client bundles.
+- Nieuwe contentvelden: liever migration SQL in `supabase/migrations/` + types in `apps/web` bijwerken.
+
+Zie `docs/cms-supabase.md`.

@@ -61,6 +61,10 @@ Server-side (alleen in Vercel server/runtime):
 2. Dan pas Stripe betalingen inschakelen
 3. Daarna Resend e-mail flows (confirmations/reminders/review requests)
 
+## CMS-database (Supabase)
+
+Na eerste deploy: voer de migratie in `supabase/migrations/00001_site_homepage.sql` uit in de SQL Editor (zie `docs/cms-supabase.md`). Daarna vult de homepage copy zich vanuit de tabel `site_homepage` (slug `default`), met fallback teksten als de tabel ontbreekt.
+
 ## Deploy stappen (kort)
 
 1. Root Directory bevestigen: `apps/web`

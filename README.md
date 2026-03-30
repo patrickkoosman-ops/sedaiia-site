@@ -6,6 +6,10 @@ Officiële Sedaiia-website (pilot), technisch opgebouwd als CreativeLeads-achtig
 
 Zie [DEPLOYMENT.md](./DEPLOYMENT.md) voor Vercel-root (`apps/web`), env-vars en domein.
 
+## CMS (Supabase)
+
+Zie [docs/cms-supabase.md](./docs/cms-supabase.md) — eerste stap: SQL-migratie `supabase/migrations/00001_site_homepage.sql` in je Supabase-project draaien.
+
 ## Structuur
 
 - `apps/web` — Next.js (App Router), productie-app voor Vercel
