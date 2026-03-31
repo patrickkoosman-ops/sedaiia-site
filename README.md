@@ -17,3 +17,11 @@ Zie [docs/cms-supabase.md](./docs/cms-supabase.md) — eerste stap: SQL-migratie
 - `apps/web` — Next.js (App Router), productie-app voor Vercel
 - `packages/` — herbruikbare modules (ui, core, config)
 - `docs/` — scope en beslissingen (o.a. [UI-stack](./docs/ui-stack.md): Flowbite + Tailwind)
+
+### Publieke pagina’s (agency + portfolio)
+
+- `/` — Home (hero o.a. uit Supabase `site_homepage`)
+- `/diensten`
+- `/portfolio` — kaarten uit `src/lib/content/portfolio.ts` (later CMS)
+- `/over`
+- `/contact` — o.a. `hallo@sedaiia.com` (pas aan naar jouw mailbox)
