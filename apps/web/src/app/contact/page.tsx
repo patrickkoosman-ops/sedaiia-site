@@ -9,18 +9,18 @@ export const metadata: Metadata = {
 
 export default function ContactPage() {
   return (
-    <main className="mx-auto max-w-6xl px-4 py-12 md:py-16">
-      <div className="max-w-2xl">
-        <p className="text-sm font-medium text-primary-600 dark:text-primary-400">Contact</p>
-        <h1 className="mt-2 text-3xl font-bold tracking-tight md:text-4xl">Laten we iets maken</h1>
-        <p className="mt-4 text-lg text-gray-600 dark:text-gray-400">
+    <main className="page-shell">
+      <div className="page-intro">
+        <p className="page-kicker">Contact</p>
+        <h1 className="page-title">Laten we iets maken</h1>
+        <p className="page-lead dark:text-gray-400">
           Vertel kort waar je tegenaan loopt: nieuwe site, herschikking van je aanbod, of sparren over
           SEO en conversie. Ik reageer zo snel mogelijk.
         </p>
       </div>
 
       <div className="mt-10 grid gap-8 lg:grid-cols-2">
-        <Card>
+        <Card className="surface-card rounded-2xl shadow-sm">
           <h2 className="text-lg font-semibold text-gray-900 dark:text-white">E-mail</h2>
           <p className="mt-2 text-gray-600 dark:text-gray-400">
             Stuur een bericht naar{" "}
@@ -38,7 +38,7 @@ export default function ContactPage() {
             </Button>
           </div>
         </Card>
-        <Card>
+        <Card className="surface-card rounded-2xl shadow-sm">
           <h2 className="text-lg font-semibold text-gray-900 dark:text-white">Volgende stappen</h2>
           <ul className="mt-2 list-inside list-disc space-y-2 text-gray-600 dark:text-gray-400">
             <li>Korte beschrijving van je organisatie en doel</li>

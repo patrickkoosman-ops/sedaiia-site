@@ -10,11 +10,11 @@ export const metadata: Metadata = {
 
 export default function OverPage() {
   return (
-    <main className="mx-auto max-w-6xl px-4 py-12 md:py-16">
-      <div className="max-w-2xl">
-        <p className="text-sm font-medium text-primary-600 dark:text-primary-400">Over</p>
-        <h1 className="mt-2 text-3xl font-bold tracking-tight md:text-4xl">One-man agency</h1>
-        <p className="mt-4 text-lg text-gray-600 dark:text-gray-400">
+    <main className="page-shell">
+      <div className="page-intro">
+        <p className="page-kicker">Over</p>
+        <h1 className="page-title">One-man agency</h1>
+        <p className="page-lead dark:text-gray-400">
           Sedaiia is mijn studio: ik combineer design, UX-denken en development om websites te bouwen
           die er goed uitzien, snel laden en écht iets opleveren — vooral daar waar concurrentie om
           zichtbaarheid en conversie draait.
@@ -22,7 +22,7 @@ export default function OverPage() {
       </div>
 
       <div className="mt-12 grid gap-6 lg:grid-cols-2">
-        <Card>
+        <Card className="surface-card rounded-2xl shadow-sm">
           <h2 className="text-xl font-semibold text-gray-900 dark:text-white">Twee niches</h2>
           <p className="mt-2 text-gray-600 dark:text-gray-400">
             Onder Sedaiia werk ik met twee duidelijke lijnen:{" "}
@@ -33,7 +33,7 @@ export default function OverPage() {
             sector.
           </p>
         </Card>
-        <Card>
+        <Card className="surface-card rounded-2xl shadow-sm">
           <h2 className="text-xl font-semibold text-gray-900 dark:text-white">Hoe ik werk</h2>
           <p className="mt-2 text-gray-600 dark:text-gray-400">
             Geen buzzwords, wel heldere stappen: inhoud en doelen scherp krijgen, dan ontwerp en

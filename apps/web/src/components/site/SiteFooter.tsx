@@ -12,7 +12,10 @@ const currentYear = new Date().getFullYear();
 
 export function SiteFooter() {
   return (
-    <Footer container className="mt-auto border-t border-gray-200 bg-gray-50 dark:border-gray-700 dark:bg-gray-900">
+    <Footer
+      container
+      className="mt-auto border-t border-gray-200/80 bg-[var(--brand-surface)] dark:border-gray-700 dark:bg-gray-900"
+    >
       <div className="w-full max-w-6xl mx-auto">
         <div className="grid w-full grid-cols-2 gap-8 md:grid-cols-4">
           <div className="col-span-2">

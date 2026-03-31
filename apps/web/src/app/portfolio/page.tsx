@@ -10,11 +10,11 @@ export const metadata: Metadata = {
 
 export default function PortfolioPage() {
   return (
-    <main className="mx-auto max-w-6xl px-4 py-12 md:py-16">
-      <div className="max-w-2xl">
-        <p className="text-sm font-medium text-primary-600 dark:text-primary-400">Werk</p>
-        <h1 className="mt-2 text-3xl font-bold tracking-tight md:text-4xl">Portfolio</h1>
-        <p className="mt-4 text-lg text-gray-600 dark:text-gray-400">
+    <main className="page-shell">
+      <div className="page-intro">
+        <p className="page-kicker">Werk</p>
+        <h1 className="font-editorial mt-2 text-5xl tracking-tight md:text-6xl">Portfolio</h1>
+        <p className="page-lead dark:text-gray-400">
           Een overzicht van projecten en propositions. Placeholders kan je vervangen door echte cases
           zodra je die wilt tonen — de structuur is al klaar voor uitbreiding (bijv. detailpagina&apos;s).
         </p>
@@ -23,7 +23,7 @@ export default function PortfolioPage() {
       <ul className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
         {PORTFOLIO_ITEMS.map((item) => (
           <li key={item.slug}>
-            <Card className="h-full">
+            <Card className="surface-card h-full rounded-2xl shadow-sm">
               <p className="text-xs font-medium uppercase tracking-wide text-primary-600 dark:text-primary-400">
                 {item.niche}
               </p>

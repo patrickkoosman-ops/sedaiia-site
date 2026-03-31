@@ -17,6 +17,7 @@ Zie [docs/cms-supabase.md](./docs/cms-supabase.md) — eerste stap: SQL-migratie
 - `apps/web` — Next.js (App Router), productie-app voor Vercel
 - `packages/` — herbruikbare modules (ui, core, config)
 - `docs/` — scope en beslissingen (o.a. [UI-stack](./docs/ui-stack.md): Flowbite + Tailwind)
+- Brand system: [docs/brand-identity.md](./docs/brand-identity.md)
 
 ### Publieke pagina’s (agency + portfolio)
 

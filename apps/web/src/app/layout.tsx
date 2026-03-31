@@ -1,9 +1,21 @@
 import { SiteShell } from "@/components/site/SiteShell";
 import { ThemeModeScript } from "flowbite-react";
 import type { Metadata } from "next";
+import { DM_Serif_Display, Inter } from "next/font/google";
 import type { ReactNode } from "react";
 import { ThemeInit } from "../../.flowbite-react/init";
 import "./globals.css";
+
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-sans"
+});
+
+const dmSerif = DM_Serif_Display({
+  subsets: ["latin"],
+  weight: "400",
+  variable: "--font-display"
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://sedaiia.com"),
@@ -30,7 +42,9 @@ export default function RootLayout({ children }: RootLayoutProps) {
       <head>
         <ThemeModeScript defaultMode="light" />
       </head>
-      <body className="bg-white text-gray-900 antialiased dark:bg-gray-900 dark:text-white">
+      <body
+        className={`${inter.variable} ${dmSerif.variable} bg-white text-gray-900 antialiased dark:bg-gray-900 dark:text-white`}
+      >
         <ThemeInit />
         <SiteShell>{children}</SiteShell>
       </body>

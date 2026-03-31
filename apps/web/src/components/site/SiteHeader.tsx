@@ -9,8 +9,8 @@ export function SiteHeader() {
   const pathname = usePathname();
 
   return (
-    <header className="sticky top-0 z-50 border-b border-gray-200 bg-white/90 backdrop-blur-md dark:border-gray-700 dark:bg-gray-900/90">
-      <Navbar fluid rounded className="max-w-6xl mx-auto">
+    <header className="sticky top-0 z-50 border-b border-gray-200/70 bg-white/80 backdrop-blur-md dark:border-gray-700 dark:bg-gray-900/90">
+      <Navbar fluid rounded={false} className="max-w-6xl mx-auto py-2">
         <NavbarBrand as={Link} href="/">
           <span className="self-center whitespace-nowrap text-xl font-semibold tracking-tight text-gray-900 dark:text-white">
             Sedaiia
@@ -24,6 +24,7 @@ export function SiteHeader() {
               active={pathname === item.href}
               as={Link}
               href={item.href}
+              className="text-[15px] font-medium"
             >
               {item.label}
             </NavbarLink>
