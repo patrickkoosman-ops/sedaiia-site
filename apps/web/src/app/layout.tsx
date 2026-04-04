@@ -1,17 +1,18 @@
 import { SiteShell } from "@/components/site/SiteShell";
 import { ThemeModeScript } from "flowbite-react";
 import type { Metadata } from "next";
-import { DM_Serif_Display, Inter } from "next/font/google";
+import { Gloock, Work_Sans } from "next/font/google";
 import type { ReactNode } from "react";
 import { ThemeInit } from "../../.flowbite-react/init";
 import "./globals.css";
 
-const inter = Inter({
+const workSans = Work_Sans({
   subsets: ["latin"],
-  variable: "--font-sans"
+  variable: "--font-sans",
+  weight: ["400", "500", "600", "700", "800"]
 });
 
-const dmSerif = DM_Serif_Display({
+const gloock = Gloock({
   subsets: ["latin"],
   weight: "400",
   variable: "--font-display"
@@ -20,11 +21,11 @@ const dmSerif = DM_Serif_Display({
 export const metadata: Metadata = {
   metadataBase: new URL("https://sedaiia.com"),
   title: {
-    default: "Sedaiia — Design & webdevelopment",
+    default: "Sedaiia — Boutique webdesign studio",
     template: "%s — Sedaiia"
   },
   description:
-    "One-man agency: design, UX en maatwerkwebsites voor esthetische klinieken en creative studios in Nederland.",
+    "Boutique webdesign studio voor de esthetische en creatieve industrie — high-end, persoonlijk en art directed.",
   openGraph: {
     locale: "nl_NL",
     siteName: "Sedaiia",
@@ -41,10 +42,12 @@ export default function RootLayout({ children }: RootLayoutProps) {
     <html lang="nl" suppressHydrationWarning>
       <head>
         <ThemeModeScript defaultMode="light" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,300,0,0&display=swap"
+          rel="stylesheet"
+        />
       </head>
-      <body
-        className={`${inter.variable} ${dmSerif.variable} bg-white text-gray-900 antialiased dark:bg-gray-900 dark:text-white`}
-      >
+      <body className={`${workSans.variable} ${gloock.variable} bg-white antialiased`}>
         <ThemeInit />
         <SiteShell>{children}</SiteShell>
       </body>

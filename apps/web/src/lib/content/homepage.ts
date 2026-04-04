@@ -13,17 +13,16 @@ export type SiteHomepageRow = {
 };
 
 const FALLBACK: SiteHomepageRow = {
-  hero_kicker: "Sedaiia",
-  hero_title: "Designer & builder",
-  hero_lead:
-    "Websites voor esthetische en creative studios. Basis met Tailwind en Flowbite staat; inhoud uit Supabase volgt zodra de migratie is gedraaid.",
-  cta_primary_label: "Contact",
-  cta_primary_href: "#contact",
-  cta_secondary_label: "Flowbite React",
-  cta_secondary_href: "https://flowbite-react.com",
-  card_title: "Stack",
+  hero_kicker: "",
+  hero_title: "Sedaiia",
+  hero_lead: "Boutique webdesign studio voor de esthetische en creatieve industrie.",
+  cta_primary_label: "Consultatie",
+  cta_primary_href: null,
+  cta_secondary_label: "Werk",
+  cta_secondary_href: "/portfolio",
+  card_title: "Werkwijze",
   card_body:
-    "Next.js (App Router), Tailwind CSS v4, flowbite-react — gekoppeld aan Supabase voor CMS-light."
+    "Strategie, vormgeving en bouw in één lijn — inhoud beheer je in Supabase; de consultatie-CTA gebruikt NEXT_PUBLIC_BOOKING_URL als die gezet is."
 };
 
 export async function getHomepageContent(): Promise<SiteHomepageRow> {

@@ -1,13 +1,14 @@
 export const designTokens = {
   color: {
     primary: "#003dff",
-    surface: "#f3f4f8",
-    text: "#0f172a",
-    border: "#e8eaf0"
+    surface: "#f7f5f2",
+    text: "#171717",
+    textMuted: "#a3a3a3",
+    border: "#e5e5e5"
   },
   font: {
-    body: "Inter",
-    heading: "DM Serif Display"
+    body: "Work Sans",
+    heading: "Gloock"
   },
   radius: {
     card: "1rem"

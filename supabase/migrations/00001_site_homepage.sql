@@ -5,7 +5,7 @@ create table if not exists public.site_homepage (
   id uuid primary key default gen_random_uuid(),
   slug text not null unique default 'default',
   updated_at timestamptz not null default now(),
-  hero_kicker text not null default 'Sedaiia',
+  hero_kicker text not null default '',
   hero_title text not null,
   hero_lead text,
   cta_primary_label text,
@@ -30,6 +30,7 @@ create policy "site_homepage_select_public"
 -- Optioneel: eerste rij (draait als migratie-owner, niet als anon)
 insert into public.site_homepage (
   slug,
+  hero_kicker,
   hero_title,
   hero_lead,
   cta_primary_label,
@@ -41,13 +42,14 @@ insert into public.site_homepage (
 )
 values (
   'default',
-  'Designer & builder',
-  'Websites voor esthetische en creative studios. Content beheer je in Supabase; deze site leest het hier.',
-  'Contact',
-  '#contact',
-  'Flowbite React',
-  'https://flowbite-react.com',
-  'Stack',
-  'Next.js (App Router), Tailwind CSS v4, flowbite-react — gekoppeld aan Supabase voor CMS-light.'
+  '',
+  'Sedaiia',
+  'Boutique webdesign studio voor de esthetische en creatieve industrie.',
+  'Consultatie',
+  null,
+  'Werk',
+  '/portfolio',
+  'Werkwijze',
+  'Strategie, vormgeving en bouw in één lijn — inhoud beheer je in Supabase; de consultatie-CTA gebruikt NEXT_PUBLIC_BOOKING_URL als die gezet is.'
 )
 on conflict (slug) do nothing;

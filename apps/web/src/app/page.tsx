@@ -1,109 +1,58 @@
+import { HomeAboutIntro } from "@/components/home/HomeAboutIntro";
+import { HomeBlogPreview } from "@/components/home/HomeBlogPreview";
+import { HomeContactBlock } from "@/components/home/HomeContactBlock";
+import { HomeFaq } from "@/components/home/HomeFaq";
+import { HomeHero } from "@/components/home/HomeHero";
+import { HomeLogoStrip } from "@/components/home/HomeLogoStrip";
 import { getHomepageContent } from "@/lib/content/homepage";
 import type { Metadata } from "next";
-import { Button, Card } from "flowbite-react";
-import Link from "next/link";
 
 export const revalidate = 300;
 
 export const metadata: Metadata = {
   title: "Home",
   description:
-    "Sedaiia — design, UX en webdevelopment voor esthetische klinieken en creative studios (one-man agency)."
+    "Digitale producten en webdesign voor de esthetische en creatieve industrie — Sedaiia (design, UX & development)."
 };
 
 export default async function HomePage() {
   const c = await getHomepageContent();
 
+  const bookingHref =
+    process.env.NEXT_PUBLIC_BOOKING_URL?.trim() && process.env.NEXT_PUBLIC_BOOKING_URL.trim().length > 0
+      ? process.env.NEXT_PUBLIC_BOOKING_URL.trim()
+      : "/contact";
+
+  const primaryHref =
+    c.cta_primary_href?.trim() && c.cta_primary_href.trim().length > 0 ? c.cta_primary_href.trim() : bookingHref;
+
+  const primaryLabel =
+    c.cta_primary_label?.trim() && c.cta_primary_label.trim().length > 0 ? c.cta_primary_label.trim() : "Consultatie";
+
+  const secondaryHref =
+    c.cta_secondary_href?.trim() && c.cta_secondary_href.trim().length > 0 ? c.cta_secondary_href.trim() : "/portfolio";
+
+  const secondaryLabel =
+    c.cta_secondary_label?.trim() && c.cta_secondary_label.trim().length > 0 ? c.cta_secondary_label.trim() : "Werk";
+
+  const aboutLead =
+    c.hero_lead?.trim() && c.hero_lead.trim().length > 0
+      ? c.hero_lead.trim()
+      : "Boutique webdesign studio voor de esthetische en creatieve industrie — high-end, persoonlijk en art directed.";
+
   return (
     <>
-      <section className="border-b border-gray-100/80 bg-gradient-to-b from-[var(--brand-surface)] to-white dark:border-gray-800 dark:from-gray-900 dark:to-gray-900">
-        <div className="mx-auto max-w-6xl px-4 py-20 md:py-28">
-          <div className="max-w-3xl">
-            <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[#003dff] dark:text-primary-400">
-              {c.hero_kicker}
-            </p>
-            <h1 className="font-editorial mt-4 text-5xl leading-[1.03] text-gray-900 md:text-6xl lg:text-7xl dark:text-white">
-              {c.hero_title}
-            </h1>
-            {c.hero_lead ? (
-              <p className="mt-7 max-w-2xl text-lg text-gray-600 dark:text-gray-400 md:text-xl">{c.hero_lead}</p>
-            ) : null}
-            <div className="mt-8 flex flex-wrap gap-3">
-              {c.cta_primary_label && c.cta_primary_href ? (
-                <Button as="a" color="blue" href={c.cta_primary_href} size="lg" className="px-6">
-                  {c.cta_primary_label}
-                </Button>
-              ) : null}
-              <Button as="a" color="light" href="/portfolio" size="lg" className="px-6">
-                Bekijk portfolio
-              </Button>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="mx-auto max-w-6xl px-4 py-16 md:py-20">
-        <h2 className="font-editorial text-center text-4xl text-gray-900 dark:text-white md:text-5xl">
-          Waar ik voor sta
-        </h2>
-        <p className="mx-auto mt-3 max-w-2xl text-center text-gray-600 dark:text-gray-400">
-          Eén aanspreekpunt voor structuur, vormgeving en techniek — schaalbaar genoeg voor serieuze
-          klanten, persoonlijk genoeg voor echte samenwerking.
-        </p>
-        <div className="mt-12 grid gap-6 md:grid-cols-3">
-          <Card className="surface-card rounded-2xl shadow-sm">
-            <h3 className="text-lg font-semibold text-gray-900 dark:text-white">Design &amp; UX</h3>
-            <p className="mt-2 text-gray-600 dark:text-gray-400">
-              Heldere hiërarchie, rustige esthetiek of studio-eigen karakter — afgestemd op jouw
-              doelgroep.
-            </p>
-          </Card>
-          <Card className="surface-card rounded-2xl shadow-sm">
-            <h3 className="text-lg font-semibold text-gray-900 dark:text-white">Development</h3>
-            <p className="mt-2 text-gray-600 dark:text-gray-400">
-              Next.js, snelle hosting, toegankelijke UI. Koppelingen met data, mail en betalingen waar
-              het nodig is.
-            </p>
-          </Card>
-          <Card className="surface-card rounded-2xl shadow-sm">
-            <h3 className="text-lg font-semibold text-gray-900 dark:text-white">Twee niches</h3>
-            <p className="mt-2 text-gray-600 dark:text-gray-400">
-              <Link className="text-primary-600 hover:underline dark:text-primary-400" href="/over">
-                AestheticLeads &amp; CreativeLeads
-              </Link>{" "}
-              — dezelfde kwaliteit, verschillende strategie per sector.
-            </p>
-          </Card>
-        </div>
-      </section>
-
-      {c.card_title ? (
-        <section className="border-t border-gray-100 bg-[var(--brand-surface)] py-12 dark:border-gray-800 dark:bg-gray-900/50">
-          <div className="mx-auto max-w-6xl px-4">
-            <Card className="surface-card rounded-2xl shadow-sm">
-              <h2 className="text-xl font-semibold text-gray-900 dark:text-white">{c.card_title}</h2>
-              {c.card_body ? (
-                <p className="mt-2 text-gray-600 dark:text-gray-400">{c.card_body}</p>
-              ) : null}
-            </Card>
-          </div>
-        </section>
-      ) : null}
-
-      <section className="mx-auto max-w-6xl px-4 py-16 text-center">
-        <h2 className="font-editorial text-4xl text-gray-900 dark:text-white md:text-5xl">Klaar om te starten?</h2>
-        <p className="mx-auto mt-3 max-w-xl text-gray-600 dark:text-gray-400">
-          Vertel wat je nodig hebt — van eerste site tot doorontwikkeling van je online aanwezigheid.
-        </p>
-        <div className="mt-8 flex flex-wrap justify-center gap-3">
-          <Button as="a" color="blue" href="/contact" size="lg">
-            Neem contact op
-          </Button>
-          <Button as="a" color="light" href="/diensten" size="lg">
-            Diensten
-          </Button>
-        </div>
-      </section>
+      <HomeHero
+        primaryHref={primaryHref}
+        primaryLabel={primaryLabel}
+        secondaryHref={secondaryHref}
+        secondaryLabel={secondaryLabel}
+      />
+      <HomeAboutIntro lead={aboutLead} />
+      <HomeLogoStrip />
+      <HomeBlogPreview />
+      <HomeFaq />
+      <HomeContactBlock />
     </>
   );
 }

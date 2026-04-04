@@ -6,3 +6,4 @@ apps/web/node_modules
 apps/web/tsconfig.tsbuildinfo
 apps/web/.env.local
 apps/web/.env*.local
+apps/web/verif-*.png

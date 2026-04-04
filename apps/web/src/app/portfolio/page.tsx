@@ -22,8 +22,8 @@ export default function PortfolioPage() {
 
       <ul className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
         {PORTFOLIO_ITEMS.map((item) => (
-          <li key={item.slug}>
-            <Card className="surface-card h-full rounded-2xl shadow-sm">
+          <li key={item.slug} className="group">
+            <Card className="surface-card h-full rounded-2xl shadow-sm transition duration-300 ease-out group-hover:-translate-y-1 group-hover:shadow-lg">
               <p className="text-xs font-medium uppercase tracking-wide text-primary-600 dark:text-primary-400">
                 {item.niche}
               </p>

@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint .",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "verify:ui": "sh -c 'export PATH=\"/opt/homebrew/bin:$PATH\"; next dev --port 3001 >/tmp/sedaiia-web-dev.log 2>&1 & PID=$!; trap \"kill $PID 2>/dev/null || true\" EXIT; for i in $(seq 1 30); do curl -sf http://127.0.0.1:3001/ >/dev/null && break; sleep 1; done; agent-browser close >/dev/null 2>&1 || true; agent-browser open http://127.0.0.1:3001/ && agent-browser wait --load networkidle && agent-browser eval \"document.body?.innerText?.trim().length > 50 ? \\\"HAS_CONTENT\\\" : \\\"BLANK\\\"\" && agent-browser eval \"document.querySelector(\\\"[data-nextjs-dialog], .vite-error-overlay\\\") ? \\\"ERROR_OVERLAY\\\" : \\\"OK\\\"\" && agent-browser snapshot -i && agent-browser screenshot verif-home-agent-browser.png && agent-browser close'"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.101.0",
